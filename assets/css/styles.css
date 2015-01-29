@@ -1,0 +1,138 @@
+* {font-family:arial; margin:0; padding:0;}
+
+body{
+	width: 100%;
+	max-width: 1720px;
+	position: relative;
+	margin: 0 auto;
+}
+
+p {
+    margin: 1em auto;
+}
+
+div, section{
+	outline: 1px solid red;
+}
+
+section{
+	width: 80%;
+	position: relative;
+	margin: 40px auto;
+/*	height: 500px;*/
+}
+
+.clearfix{
+	clear: both;
+}
+
+/*stick to top*/
+
+.logo {font-size:40px; font-weight:bold;color:#00a; font-style:italic;}
+.intro {color:#777; font-style:italic; margin:10px 0;}
+.menu {background:#00a; color:#fff; height:40px; line-height:40px;letter-spacing:1px; }
+
+/*nav*/
+
+header a{
+	color: #fff;
+	text-decoration: none;
+}
+
+header ul{
+	list-style: none;
+}
+
+header ul li{
+	float: left;
+	padding: 0 10px;
+}
+
+/*containers*/
+
+.outer-wrapper{
+	width: 90%;
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	/*overflow: hidden;*/
+}
+
+.header-container{
+	position: relative;
+	width: 80%;
+	height: 50px;
+	margin: 0 auto;
+}
+
+
+
+.content-wrapper{
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+
+/*footer*/
+
+.footer-container{
+	min-height: 600px;
+}
+
+.footer-container.row{
+	margin: 0 auto;
+	width: 80%;
+}
+
+.footer-container iframe{
+	width: 100% !important;
+}
+
+div.footer-section{
+	/*height: 100%;*/
+}
+
+.container.social-icons-container{
+	width: 100%;
+	min-width: 600px;
+}
+
+.social-icons-container ul{
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	width: 475px;
+}
+
+.social-icons-container ul li{
+	float: right;
+	margin-right: 15px;
+}
+
+.social-icons-container ul li div{
+	height: 100px;
+	width: 100px;
+}
+
+.social-icons-container ul li:last-child:after{
+	clear:both;
+}
+
+.social-icon.facebook{
+	background: url('https://ashleybudd.files.wordpress.com/2013/11/sm-icons-collection.jpg') center center no-repeat;
+	background-position: -29px -26px;
+}
+.social-icon.github{
+	background: url('https://ashleybudd.files.wordpress.com/2013/11/sm-icons-collection.jpg') center center no-repeat;
+	background-position: -29px -26px;
+}
+.social-icon.linkedin{
+	background: url('https://ashleybudd.files.wordpress.com/2013/11/sm-icons-collection.jpg') center center no-repeat;
+	background-position: -29px -26px;
+}
+.social-icon.google{
+	background: url('https://ashleybudd.files.wordpress.com/2013/11/sm-icons-collection.jpg') center center no-repeat;
+	background-position: -29px -26px;
+}
+
