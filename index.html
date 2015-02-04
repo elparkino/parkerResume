@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>resume</title>
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
@@ -8,8 +9,7 @@
 <body ng-app="parker.resume">
 	<div class="outer-wrapper">
 		<header>
-		  <div class="logo">Resume site</div>
-		  <div class="intro">Some dumbass tagline goes here</div>
+		<img class="parker-logo" src="assets/img/parkerjoneschirho.png" alt="">
 		  <div class="menu">
 		  	<ul>
 		  		<li><a href="#education">link1</a></li>
@@ -17,6 +17,15 @@
 		  		<li><a href="#contact">link1</a></li>
 		  		<div class="clearfix"></div>
 		  	</ul>
+		  <div class="social-icons-container-header container">
+		  	<ul>
+		  		<li><div class="social-icon facebook header-icon"></div></li>
+		  		<li><div class="social-icon github header-icon"></div></li>
+		  		<li><div class="social-icon linkedin header-icon"></div></li>
+		  		<li><div class="social-icon google header-icon"></div></li>
+		  		<div class="clearfix"></div>
+		  	</ul>
+		  </div>
 		  </div>
 		</header>
 
@@ -55,44 +64,16 @@
 			</section>
 		</div>
 		<div class="footer-container row">
-<div class="col-lg-4 footer-section">
-			<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/parkerlives" data-widget-id="554879754722365440">Tweets by @parkerlives</a>
-			<script>
-				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-			</script>
-</div>
+			<div class="col-lg-4 footer-section">
+				<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/parkerlives" data-widget-id="554879754722365440">Tweets by @parkerlives</a>
+				<script>
+					!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+				</script>
+			</div>
   <div class="col-lg-8 footer-section">
-  	<div style="width:100%">
-		 <form role="form" action="" method="post" >
-		  
-		      <div class="form-group">
-		        <label for="InputName">Your Name</label>
-		        <div class="input-group">
-		          <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
-		          <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span></div>
-		      </div>
-		      <div class="form-group">
-		        <label for="InputEmail">Your Email</label>
-		        <div class="input-group">
-		          <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Enter Email" required  >
-		          <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span></div>
-		      </div>
-		      <div class="form-group">
-		        <label for="InputMessage">Message</label>
-		        <div class="input-group">
-		          <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
-		          <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span></div>
-		      </div>
-		      <div class="form-group">
-		        <label for="InputReal">What is 4+3? (Simple Spam Checker)</label>
-		        <div class="input-group">
-		          <input type="text" class="form-control" name="InputReal" id="InputReal" required>
-		          <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span></div>
-		      <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
-		      </div>
-		  </form>
-  	</div>
- 
+ <div class="call-to-action">
+ 	<h1>Get in touch</h1>
+ </div>
   <div class="social-icons-container container">
   	<ul>
   		<li><div class="social-icon facebook"></div></li>
@@ -102,11 +83,21 @@
   		<div class="clearfix"></div>
   	</ul>
   </div>
+	<div ng-controller="instaController">
+	        <div class="row">
+				<div ng-repeat="p in pics | orderBy:orderBy" class="col-md-2">
+					<a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.low_resolution.url}}" class="img-responsive thumbnail" title="{{p.caption.text}}"></a>
+					<span class="glyphicon glyphicon-heart"> {{p.likes.count}}</span>      
+	        	</div>
+	    	</div>
+		</div>
+	</div>
     </div>
 
 		</div>
 	</div>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js'></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.8/angular.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.min.js"></script>
